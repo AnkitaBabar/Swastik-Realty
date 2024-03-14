@@ -1,0 +1,64 @@
+/* 
+earth color pallete
+43766C
+F8FAE5
+B19470
+76453B*/
+html {
+    scroll-behavior: smooth;
+  }
+.earth-green-background{
+    background-color: #43766C;
+}
+.earth-light-background{
+    background-color: #F8FAE5;
+}
+.earth-medium-background{
+    background-color: #B19470;
+}
+.earth-dark-background{
+    background-color: #76453B;
+}
+
+/* hover background styles */
+.hover-earth-green-background:hover{
+    background-color: #43766C;
+}
+.hover-earth-light-background:hover{
+    background-color: #F8FAE5;
+}
+.hover-earth-medium-background:hover{
+    background-color: #B19470;
+}
+.hover-earth-dark-background:hover{
+    background-color: #76453B;
+}
+
+
+/* colors */
+.earth-green{
+    color: #43766C;
+}
+.earth-light{
+    color: #F8FAE5;
+}
+.earth-medium{
+    color: #B19470;
+}
+.earth-dark{
+    color: #76453B;
+}
+/* hover color styles */
+.hover-earth-green:hover{
+    color: #43766C;
+}
+.hover-earth-light:hover{
+    color: #F8FAE5;
+}
+.hover-earth-medium:hover{
+    color: #B19470;
+}
+.hover-earth-dark:hover{
+    color: #76453B;
+}
+
