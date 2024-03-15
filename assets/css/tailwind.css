@@ -4920,3 +4920,25 @@ input[type="radio"]:checked ~ .box span{
     font-size: 22px;
   }
 }
+
+
+.grid {
+  display: grid;
+}
+
+ 
+
+.ring-gray-300 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity));
+}
+
+.gap-x-6 {
+  -moz-column-gap: 1.5rem;
+  column-gap: 1.5rem;
+}
+
+.sm\:grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+ 
