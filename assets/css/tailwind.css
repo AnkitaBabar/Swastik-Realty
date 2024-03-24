@@ -2536,6 +2536,10 @@ input[type="radio"]:checked ~ .box span{
   padding-top: 120px;
   padding-bottom: 120px;
 }
+.py-\[70px\]{
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
 
 .py-\[6px\]{
   padding-top: 6px;
@@ -2609,6 +2613,14 @@ input[type="radio"]:checked ~ .box span{
   padding-bottom: 110px;
 }
 
+.pb-\[90px\]{
+  padding-bottom: 90px;
+}
+
+.pb-\[70px\]{
+  padding-bottom: 70px;
+}
+
 .pl-2{
   padding-left: 0.5rem;
 }
@@ -2647,6 +2659,10 @@ input[type="radio"]:checked ~ .box span{
 
 .pt-\[120px\]{
   padding-top: 120px;
+}
+
+.pt-\[150px\]{
+  padding-top: 150px;
 }
 
 .pr-\[10px\]{
@@ -4234,6 +4250,12 @@ input[type="radio"]:checked ~ .box span{
     font-size: 1.5rem;
     line-height: 2rem;
   }
+  .xs\:h-full{
+    height: 100%;
+  }
+  .xs\:hidden{
+    display: none;
+  }
 }
 
 @media (min-width: 540px){
@@ -4388,6 +4410,12 @@ input[type="radio"]:checked ~ .box span{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+  .sm\:h-full{
+    height: 100%;
+  }
+  .sm\:hidden{
+    display: none;
+  }
 }
 
 @media (min-width: 720px){
@@ -4525,6 +4553,13 @@ input[type="radio"]:checked ~ .box span{
   .md\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+  .md\:hidden{
+    display: none;
+  }
+
+  .md\:inline-visible{
+    display: inline;
   }
 }
 
@@ -4774,6 +4809,12 @@ input[type="radio"]:checked ~ .box span{
     --tw-shadow: 0 0 #0000;
     --tw-shadow-colored: 0 0 #0000;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  .lg\:absolute{
+    position: absolute;
+  }
+  .lg\:visible{
+    display: block;
   }
 
   @media (prefers-color-scheme: dark){

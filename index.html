@@ -42,29 +42,29 @@
             </button>
           </div>
           <nav :class="!navbarOpen && 'hidden' " id="navbarCollapse"
-            class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white px-6 py-5 shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent">
+            class="absolute right-0 top-full w-full py-[70px] bg-white px-6  shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent">
             <ul class="block lg:flex">
               <li>
-                <a href="#hero"
-                  class="flex py-2 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
+                <a href="#hero" @click="navbarOpen = false"
+                  class="flex py-9 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#services"
-                  class="flex py-2 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
+                <a href="#services" @click="navbarOpen = false"
+                  class="flex py-9 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#about"
-                  class="flex py-2 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
+                <a href="#about" @click="navbarOpen = false"
+                  class="flex py-9 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
                   About us
                 </a>
               </li>
               <li>
-                <a href="#contact"
-                  class="flex py-2 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
+                <a href="#contact" @click="navbarOpen = false"
+                  class="flex py-9 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
                   Contact Us
                 </a>
               </li>
@@ -74,12 +74,12 @@
 
         </div>
 
-        <div class="flex">
+        <!-- <div class="flex">
           <div class="h-11 w-11 earth-green-background"></div>
           <div class="h-11 w-11 earth-light-background"></div>
           <div class="h-11 w-11 earth-medium-background"></div>
           <div class="h-11 w-11 earth-dark-background"></div>
-          <!-- <div class="hidden justify-end pr-16 sm:flex lg:pr-0">
+           <div class="hidden justify-end pr-16 sm:flex lg:pr-0">
                         <a href="javascript:void(0)"
                             class="px-7 py-3 text-base font-medium text-dark hover:text-primary dark:text-white">
                             Login
@@ -88,8 +88,8 @@
                             class="rounded-md bg-primary px-7 py-3 text-base font-medium text-white hover:bg-primary/90">
                             Sign Up
                         </a>
-                    </div> -->
-        </div>
+                    </div> 
+      </div> -->
       </div>
     </div>
   </header>
@@ -98,9 +98,9 @@
 
   <!-- ====== Hero Section Start -->
   <section id="hero"
-    class="relative bg-white pb-[110px] pt-[120px] dark:bg-dark lg:pt-[120px] earth-dark-background bg-gradient-to-r from-[#76453B] to-[#B19470]  ">
+    class="relative sm:h-full bg-white pb-[70px] pt-[120px] dark:bg-dark lg:pt-[120px] earth-dark-background bg-gradient-to-r from-[#76453B] to-[#B19470]  ">
     <div class="container mx-auto mt-10 ">
-      <div class="absolute -mx-4 flex flex-wrap items-center z-10">
+      <div class="lg:absolute -mx-4 flex flex-wrap items-center z-10">
         <div class="w-full px-4 lg:w-5/62">
           <div class="hero-content">
             <h1
@@ -111,9 +111,11 @@
 
             <p class="mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6 earth-light">
               At Swastik Reality, we understand the importance of finding the right property management
-              services to meet your unique needs. Whether you're a property owner looking for reliable
-              management solutions or a tenant seeking a comfortable and well-maintained space, we have
-              you covered.
+              services to meet your unique needs. <span class="hidden md:inline-visible">Whether you're a property owner
+                looking for
+                reliable
+                management solutions or a tenant seeking a comfortable and well-maintained space, we have
+                you covered.</span>
             </p>
             <ul class="flex flex-wrap items-center">
               <li>
@@ -443,17 +445,13 @@
               </li>
 
             </ul>
-            <div class="clients pt-16">
 
-            </div>
           </div>
         </div>
 
       </div>
-      <div class="relative">
-
-
-        <?xml version="1.0" encoding="utf-8"?>
+      <div class="relative hidden lg:visible pt-20">
+        <?xml version=" 1.0" encoding="utf-8" ?>
         <svg viewBox="0.446 322.0351 497.813 177.1479" xmlns="http://www.w3.org/2000/svg">
           <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"
             d="M 162.036 497.372 L 161.552 441.707 L 165.661 441.707 L 165.622 436.627 L 189.728 436.869 L 189.713 441.651 L 194.53 441.699 L 194.475 497.595 L 162.036 497.372 Z"
