@@ -42,7 +42,7 @@
             </button>
           </div>
           <nav :class="!navbarOpen && 'hidden' " id="navbarCollapse"
-            class="absolute right-0 top-full w-full py-[70px] bg-white px-6  shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent">
+            class="absolute right-0 top-full w-full py-[70px] lg:py-0 bg-white px-6  shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent">
             <ul class="block lg:flex">
               <li>
                 <a href="#hero" @click="navbarOpen = false"
@@ -125,11 +125,11 @@
                     Open Modal
                   </button>
                   <div x-show="modalOpen" x-transition
-                    class="fixed left-0 top-0 flex h-full  min-h-screen w-full items-center justify-center bg-dark/90 px-4 py-5 z-40">
+                    class="fixed left-0 top-0 flex h-full  min-h-screen w-full items-center justify-center bg-dark/90  py-5 z-40">
                     <div @click.outside="modalOpen = false"
                       class="w-4/5 flex relative bg-white px-8 py-12  dark:bg-dark-2 md:px-[70px] md:py-[60px]">
 
-                      <div class="w-full">
+                      <div class="w-full hidden lg:visible">
                         <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="" height=""
                           viewBox="0 0 1126.18239 694.22222" xmlns:xlink="http://www.w3.org/1999/xlink">
                           <title>back_home</title>
@@ -304,24 +304,34 @@
 
                         <div class="overflow-scroll h-[300px]">
                           <h3 class="text-3xl mt-6 mb-4  earth-medium">Personal Information</h3>
-                          <div class="w-1/2">
-                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Full
-                              Name</label>
-                            <div class="mt-2">
-                              <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                class="block w-full rounded-md  py-1.5 text-gray-900 shadow-sm ring-1 ring-inset border placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                          <div class="flex">
+                            <div class="w-1/3">
+                              <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Full
+                                Name</label>
+                              <div class="mt-2">
+                                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                  class="block w-full rounded-md  py-1.5 text-gray-900 shadow-sm ring-1 ring-inset border placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                              </div>
+                            </div>
+                            <div class="w-1/3  ml-5">
+                              <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Phone
+                                Number</label>
+                              <div class="mt-2">
+                                <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                  class="block w-full  py-1.5 text-gray-900 shadow-sm ring-1 ring-inset rounded border border-stroke placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                              </div>
                             </div>
                           </div>
-                          <div class="w-1/2"></div>
-                          <div class="w-1/2 mt-5">
+
+                          <!-- <div class="w-1/2 mt-5">
                             <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Phone
                               Number</label>
                             <div class="mt-2">
                               <input type="text" name="last-name" id="last-name" autocomplete="family-name"
                                 class="block w-full  py-1.5 text-gray-900 shadow-sm ring-1 ring-inset rounded border border-stroke placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
-                          </div>
-                          <div class="lg:w-2/3 mt-5">
+                          </div> -->
+                          <div class="w-1/2 mt-5">
                             <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email
                               Address</label>
                             <div class="mt-2">
@@ -350,7 +360,7 @@
 
                             </div>
                           </div>
-                          <h3 class="text-3xl mt-6 mb-4  earth-medium">Property Preferences</h3>
+                          <!-- <h3 class="text-3xl mt-6 mb-4  earth-medium">Property Preferences</h3>
                           <div class="lg:w-2/3 mt-5 mb-5">
                             <label for="property-type" class="block text-sm font-medium leading-6 text-gray-900">
                               Type of Property Interested In
@@ -421,7 +431,7 @@
                               <input id="desired-movein-date" name="desired-movein-date" type="text"
                                 class="block w-full  py-1.5 text-gray-900 shadow-sm ring-1 ring-inset rounded border border-stroke placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
-                          </div>
+                          </div> -->
                         </div>
                         <div class="mt-5 pt-6 flex items-center justify-end gap-x-6 border-t border-gray-900/10">
                           <button @click="modalOpen = false" type="button"
@@ -984,7 +994,7 @@
             <h4 class="mb-[14px] text-2xl font-semibold text-dark dark:text-white text-center earth-dark">
               Property Management
             </h4>
-            <p class="text-body-color dark:text-dark-6 text-center earth-medium">
+            <p class="text-body-color dark:text-dark-6 text-center earth-medium hidden lg:visible">
               From tenant screenings to property maintenance, we handle it all to ensure your investment
               is in good hands.
             </p>
@@ -1329,7 +1339,7 @@
             <h4 class="mb-[14px] text-2xl font-semibold text-dark dark:text-white  text-center earth-dark">
               Tenant Placement
             </h4>
-            <p class="text-body-color dark:text-dark-6 text-center earth-medium">
+            <p class="text-body-color dark:text-dark-6 text-center earth-medium hidden lg:visible">
               We connect quality tenants with well-maintained properties, creating a positive and
               harmonious rental experience.
             </p>
@@ -1458,7 +1468,7 @@
             <h4 class="mb-[14px] text-2xl font-semibold text-dark dark:text-white text-center earth-dark">
               Maintenance and Repairs
             </h4>
-            <p class="text-body-color dark:text-dark-6 text-center earth-medium">
+            <p class="text-body-color dark:text-dark-6 text-center earth-medium hidden lg:visible">
               Our dedicated team ensures that your property is always in top condition, providing peace of
               mind to both owners and tenants.
             </p>
@@ -1480,8 +1490,8 @@
 
       <div class="-mx-4 flex flex-wrap items-center justify-between">
 
-        <div class="w-full px-4 lg:w-6/12">
-          <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="844.67538" height="595.26155"
+        <div class="w-full px-4 lg:w-6/12 hidden lg:visible">
+          <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="" height=""
             viewBox="0 0 844.67538 595.26155" xmlns:xlink="http://www.w3.org/1999/xlink">
             <circle cx="431.39281" cy="548" r="46" fill="#76453B" />
             <path
@@ -1958,7 +1968,8 @@
   </section>
   <!-- ====== Testimonials Section End -->
   <!-- ====== Contact Section Start -->
-  <section class="relative z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px] earth-light-background">
+  <section id="contact"
+    class="relative overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px] earth-light-background">
     <div class="container mx-auto ">
       <div class="-mx-4 flex flex-wrap lg:justify-between">
         <div class="w-full px-4 lg:w-1/2 xl:w-6/12">
@@ -2045,7 +2056,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full px-4 lg:w-1/2 xl:w-5/12">
+        <div class="w-full px-4 lg:w-1/2 xl:w-5/12 hidden lg:visible">
 
           <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="" height=""
             viewBox="0 0 965.82539 729.2137" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -2212,13 +2223,13 @@
               </div>
             </form> -->
           <!-- <div> -->
-          <span class="absolute -right-9 -top-10 z-[-1]">
+          <span class="absolute -right-9 -top-10 z-10 lg:visible">
             <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M0 100C0 44.7715 0 0 0 0C55.2285 0 100 44.7715 100 100C100 100 100 100 0 100Z" fill="#43766C" />
             </svg>
           </span>
-          <span class="absolute -right-10 top-[90px] z-[-1]">
+          <span class="absolute -right-10 top-[90px] z-10 lg:visible">
             <svg width="34" height="134" viewBox="0 0 34 134" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="31.9993" cy="132" r="1.66667" transform="rotate(180 31.9993 132)" fill="#13C296" />
               <circle cx="31.9993" cy="117.333" r="1.66667" transform="rotate(180 31.9993 117.333)" fill="#13C296" />
@@ -2252,7 +2263,7 @@
               <circle cx="2.66536" cy="1.66665" r="1.66667" transform="rotate(180 2.66536 1.66665)" fill="#13C296" />
             </svg>
           </span>
-          <span class="absolute -bottom-7 -left-7 z-[-1]">
+          <span class="absolute -bottom-7 -left-7 z-10 lg:visible">
             <svg width="107" height="134" viewBox="0 0 107 134" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="104.999" cy="132" r="1.66667" transform="rotate(180 104.999 132)" fill="#13C296" />
               <circle cx="104.999" cy="117.333" r="1.66667" transform="rotate(180 104.999 117.333)" fill="#13C296" />
@@ -2388,19 +2399,19 @@
             </h4>
             <ul class="space-y-3">
               <li>
-                <a href="javascript:void(0)"
+                <a href="404.html"
                   class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
                   Property Management
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)"
+                <a href="404.html"
                   class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
                   Tenant Placement
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)"
+                <a href="404.html"
                   class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
                   Maintenance and Repairs
                 </a>
@@ -2423,29 +2434,19 @@
             </h4>
             <ul class="space-y-3">
               <li>
-                <a href="javascript:void(0)"
+                <a href="404.html"
                   class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  About TailGrids
+                  About Swastik Realty
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)"
+                <a href="404.html"
                   class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
                   Contact & Support
                 </a>
               </li>
-              <li>
-                <a href="javascript:void(0)"
-                  class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Success History
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)"
-                  class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Setting & Privacy
-                </a>
-              </li>
+
+
             </ul>
           </div>
         </div>
@@ -2455,30 +2456,20 @@
               Quick Links
             </h4>
             <ul class="space-y-3">
+
               <li>
-                <a href="javascript:void(0)"
-                  class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Premium Support
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)"
+                <a href="404.html"
                   class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
                   Our Services
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)"
+                <a href="404.html"
                   class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
                   Know Our Team
                 </a>
               </li>
-              <li>
-                <a href="javascript:void(0)"
-                  class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Download App
-                </a>
-              </li>
+
             </ul>
           </div>
         </div>
@@ -2518,7 +2509,7 @@
               </a>
             </div>
             <p class="text-base text-body-color dark:text-dark-6">
-              &copy; 2025 TailGrids
+              &copy;
             </p>
           </div>
         </div>

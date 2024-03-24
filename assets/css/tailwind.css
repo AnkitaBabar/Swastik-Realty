@@ -1154,6 +1154,10 @@ input[type="radio"]:checked ~ .box span{
   margin-left: 0.75rem;
 }
 
+.ml-5{
+  margin-left: 1.25rem;
+}
+
 .ml-auto{
   margin-left: auto;
 }
@@ -2536,6 +2540,7 @@ input[type="radio"]:checked ~ .box span{
   padding-top: 120px;
   padding-bottom: 120px;
 }
+
 .py-\[70px\]{
   padding-top: 70px;
   padding-bottom: 70px;
@@ -4815,6 +4820,11 @@ input[type="radio"]:checked ~ .box span{
   }
   .lg\:visible{
     display: block;
+  }
+
+  .lg\:py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   @media (prefers-color-scheme: dark){
