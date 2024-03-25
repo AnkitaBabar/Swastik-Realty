@@ -4609,6 +4609,9 @@ input[type="radio"]:checked ~ .box span{
   .md\:visible{
     display: block;
   }
+  .md\:absolute{
+    position: absolute;
+  }
 }
 
 @media (min-width: 960px){

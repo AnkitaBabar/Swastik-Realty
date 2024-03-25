@@ -47,26 +47,30 @@
             <ul class="block lg:flex">
               <li>
                 <a href="#hero" @click="navbarOpen = false"
-                  class="flex py-5 text-base text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
-                  <i class="fa-solid fa-house"></i> <span class="ml-3">Home</span>
+                  class="flex py-5 text-base text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white  lg:inline-flex earth-medium hover-earth-dark">
+                  <div class="lg:hidden"><i class="fa-solid fa-house lg:hidden"></i> </div>
+                  <span class="ml-3">Home</span>
                 </a>
               </li>
               <li>
                 <a href="#services" @click="navbarOpen = false"
-                  class="flex py-5 text-base  text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
-                  <i class="fa-solid fa-house-circle-check lg:hidden"></i><span class="ml-3">Services</span>
+                  class="flex py-5 text-base  text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white  lg:inline-flex earth-medium hover-earth-dark">
+                  <div class="lg:hidden"><i class="fa-solid fa-house-circle-check lg:hidden"></i></div><span
+                    class="ml-3">Services</span>
                 </a>
               </li>
               <li>
                 <a href="#about" @click="navbarOpen = false"
-                  class="flex py-5 text-base text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
-                  <i class="fa-solid fa-people-group"></i><span class="ml-3">About us</span>
+                  class="flex py-5 text-base text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white  lg:inline-flex earth-medium hover-earth-dark">
+                  <div class="lg:hidden"><i class="fa-solid fa-people-group"></i></div><span class="ml-3">About
+                    us</span>
                 </a>
               </li>
               <li>
                 <a href="#contact" @click="navbarOpen = false"
-                  class="flex py-5 text-base text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex earth-medium hover-earth-dark">
-                  <i class="fa-solid fa-phone"></i><span class="ml-3">Contact Us</span>
+                  class="flex py-5 text-base text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white  lg:inline-flex earth-medium hover-earth-dark">
+                  <div class="lg:hidden"><i class="fa-solid fa-phone"></i></div>
+                  <span class="ml-3">Contact Us</span>
                 </a>
               </li>
             </ul>
@@ -538,7 +542,7 @@
                             class="inline-flex items-center justify-center rounded-full border  earth-green-background px-7 py-3 text-center text-base font-medium text-white hover:border-[#43766C] hover:bg-[#43766C] active:border-[#43766C] active:bg-[#43766C] disabled:border-gray-3 disabled:bg-gray-3 disabled:text-dark-5">Save</button>
                         </div>
                       </div>
-                      <div class="absolute right-6">
+                      <div class="absolute right-6 ">
                         <button @click="modalOpen = false">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
@@ -1707,19 +1711,22 @@
               Swastik Realty - Pioneering Excellence in Property Management
             </h2>
             <p class="mb-5 text-base earth-dark dark:text-dark-6">
-              - Proven Track Record: We have a successful history of managing properties effectively, providing peace of
-              mind to property owners.
+              - Proven Track Record<span class="hidden lg:visible">: We have a successful history of managing properties
+                effectively, providing peace of
+                mind to property owners.</span>
             </p>
             <p class="mb-8 text-base earth-dark dark:text-dark-6">
-              - Personalized Approach: Our team understands that every property is unique, and we tailor our services to
-              meet your specific needs.
+              - Personalized Approach<span class="hidden lg:visible">: Our team understands that every property is
+                unique, and we tailor our services to
+                meet your specific needs.</span>
             </p>
             <p class="mb-8 text-base earth-dark dark:text-dark-6">
-              - Customer-Centric: We prioritize open communication and transparency, keeping you informed every step of
-              the way.
+              - Customer-Centric<span class="hidden lg:visible">: We prioritize open communication and transparency,
+                keeping you informed every step of
+                the way.</span>
             </p>
             <p class="mb-8 text-base earth-dark dark:text-dark-6">
-              Discover why property owners and tenants choose [Your Company Name] for their property management needs.
+              Discover why property owners and tenants choose Swastik Realty for their property management needs.
             </p>
             <!-- <a href="javascript:void(0)"
               class="inline-flex items-center justify-center rounded-md border border-transparent bg-primary px-7 py-3 text-center text-base font-medium text-white hover:bg-opacity-90">
@@ -1753,9 +1760,9 @@
                 class="mx-auto h-full min-w-[300px] xs:min-w-[368px] sm:min-w-[508px] sm:p-6 md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[910px]">
                 <div class="w-full md:flex">
                   <div
-                    class="relative mb-12 w-full max-w-[310px] md:mb-0 md:mr-12 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] xl:max-w-[310px] 2xl:mr-16">
+                    class="relative mb-12 w-1/2 mx-auto justify-center max-w-[310px] md:mb-0 md:mr-12 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] xl:max-w-[310px] 2xl:mr-16">
 
-                    <span class="absolute -left-6 -top-6 z-[-1] hidden sm:block">
+                    <span class=" md:absolute -left-6 -top-6 z-[-1]  sm:block">
 
                       <svg xmlns="http://www.w3.org/2000/svg" width="" height="" viewBox="0 0 532 532"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -1782,7 +1789,7 @@
                     </span>
 
                   </div>
-                  <div class="w-full">
+                  <div class="w-full mx-auto">
                     <span class="absolute -bottom-7 -right-7 z-[-1]">
                       <svg width="107" height="134" viewBox="0 0 107 134" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -1912,15 +1919,15 @@
 
 
                       <p
-                        class="mb-11 text-base font-normal italic leading-[1.81] text-body-color dark:text-dark-6 sm:text-[22px]">
+                        class="mb-11 text-center text-base font-normal italic leading-[1.81] text-body-color dark:text-dark-6 sm:text-[22px]">
                         File storage made easy – including powerful features
                         you won’t find anywhere else. Whether you’re.
                       </p>
 
-                      <h4 class="mb-2 text-[22px] font-semibold leading-[27px] text-dark dark:text-white">
+                      <h4 class="mb-2 text-center text-[22px] font-semibold leading-[27px] text-dark dark:text-white">
                         Larry Diamond
                       </h4>
-                      <p class="text-base text-body-color dark:text-dark-6">
+                      <p class="text-base text-center text-body-color dark:text-dark-6">
                         Chief Executive Officer.
                       </p>
                     </div>
@@ -1933,9 +1940,9 @@
                 class="mx-auto h-full min-w-[300px] xs:min-w-[368px] sm:min-w-[508px] sm:p-6 md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[910px]">
                 <div class="w-full md:flex">
                   <div
-                    class="relative mb-12 w-full max-w-[310px] md:mb-0 md:mr-12 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] xl:max-w-[310px] 2xl:mr-16">
+                    class="relative mb-12 w-1/2 mx-auto justify-center max-w-[310px] md:mb-0 md:mr-12 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] xl:max-w-[310px] 2xl:mr-16">
 
-                    <span class="absolute -left-6 -top-6 z-[-1] hidden sm:block">
+                    <span class=" md:absolute -left-6 -top-6 z-[-1]  sm:block">
 
                       <svg xmlns="http://www.w3.org/2000/svg" width="" height="" viewBox="0 0 532 532"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -1964,15 +1971,15 @@
 
                       </div>
                       <p
-                        class="mb-11 text-base font-normal italic leading-[1.81] text-body-color dark:text-dark-6 sm:text-[22px]">
+                        class="text-center mb-11 text-base font-normal italic leading-[1.81] text-body-color dark:text-dark-6 sm:text-[22px]">
                         File storage made easy – including powerful features
                         you won’t find anywhere else. Whether you’re.
                       </p>
 
-                      <h4 class="mb-2 text-[22px] font-semibold leading-[27px] text-dark dark:text-white">
+                      <h4 class="mb-2 text-center text-[22px] font-semibold leading-[27px] text-dark dark:text-white">
                         Larry Diamond
                       </h4>
-                      <p class="text-base text-body-color dark:text-dark-6">
+                      <p class="text-center text-base text-body-color dark:text-dark-6">
                         Chief Executive Officer.
                       </p>
                     </div>
@@ -1983,9 +1990,9 @@
                 class="mx-auto h-full min-w-[300px] xs:min-w-[368px] sm:min-w-[508px] sm:p-6 md:min-w-[630px] lg:min-w-[738px] 2xl:min-w-[910px]">
                 <div class="w-full md:flex">
                   <div
-                    class="relative mb-12 w-full max-w-[310px] md:mb-0 md:mr-12 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] xl:max-w-[310px] 2xl:mr-16">
+                    class="relative mb-12 w-1/2 mx-auto justify-center max-w-[310px] md:mb-0 md:mr-12 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] xl:max-w-[310px] 2xl:mr-16">
 
-                    <span class="absolute -left-6 -top-6 z-[-1] hidden sm:block">
+                    <span class=" md:absolute -left-6 -top-6 z-[-1]  sm:block">
 
                       <svg xmlns="http://www.w3.org/2000/svg" width="" height="" viewBox="0 0 532 532"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -2025,10 +2032,10 @@
                         you won’t find anywhere else. Whether you’re.
                       </p>
 
-                      <h4 class="mb-2 text-[22px] font-semibold leading-[27px] text-dark dark:text-white">
+                      <h4 class="mb-2 text-center text-[22px] font-semibold leading-[27px] text-dark dark:text-white">
                         Larry Diamond
                       </h4>
-                      <p class="text-base text-body-color dark:text-dark-6">
+                      <p class="text-center text-base text-body-color dark:text-dark-6">
                         Chief Executive Officer.
                       </p>
                     </div>
@@ -2037,7 +2044,7 @@
               </div>
             </div>
             <div
-              class=" -bottom-7 left-0 right-0 flex items-center justify-center gap-5 sm:bottom-0 lg:pl-[120px] 2xl:bottom-8 2xl:pl-[78px]">
+              class="mt-10 -bottom-7 left-0 right-0 flex items-center justify-center gap-5 sm:bottom-0 lg:pl-[120px] 2xl:bottom-8 2xl:pl-[78px]">
               <button
                 class="d flex h-[60px] w-[60px] items-center justify-center rounded-full border border-stroke bg-white text-dark transition-all hover:border-transparent hover:drop-shadow-testimonial dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:hover:drop-shadow-none"
                 @click="$refs.carousel.scrollLeft = $refs.carousel.scrollLeft - ($refs.carousel.scrollWidth / slides.length); activeSlide -= 1">
@@ -2096,7 +2103,7 @@
                 <h4 class="mb-1 text-xl font-bold text-dark dark:text-white">
                   Our Location
                 </h4>
-                <p class="text-base text-body-color dark:text-dark-6">
+                <p class=" text-base text-body-color dark:text-dark-6">
                   Flat no. ?, Chintamani Garden B Wing, Tapodham Road, Warje, Pune 411058
                 </p>
               </div>
