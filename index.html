@@ -19,6 +19,14 @@
     // var getInTouchBtn = document.getElementById('getInTouchBtn');
     // getInTouchBtn.addEventListener('click', handleGetInTouchBtnClick);
 
+    function closeOffcanvas() {
+
+    }
+
+    function openOffcanvas() {
+
+    }
+
     function handleGetInTouchBtnClick(e) {
       var getInTouchModal = document.getElementById('getInTouchModal');
       getInTouchModal.classList.remove('hidden')
@@ -86,7 +94,8 @@
         </div>
         <div class="flex w-auto items-center justify-between px-4">
           <div>
-            <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' " id="navbarToggler"
+            <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' "
+              onclick="openOffcanvas()" id="navbarToggler"
               class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px]   lg:hidden">
               <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
               <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
@@ -97,28 +106,28 @@
             class="absolute right-0 top-full w-full pt-[80px] pb-[140px] lg:py-0 bg-white px-6  shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent">
             <ul class="block lg:flex">
               <li>
-                <a href="#hero" @click="navbarOpen = false"
+                <a href="#hero" onclick="closeOffcanvas()"
                   class="flex py-5 text-base text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white  lg:inline-flex earth-medium hover-earth-dark">
                   <div class="lg:hidden"><i class="fa-solid fa-house lg:hidden"></i> </div>
                   <span class="ml-3">Home</span>
                 </a>
               </li>
               <li>
-                <a href="#services" @click="navbarOpen = false"
+                <a href="#services" onclick="closeOffcanvas()"
                   class="flex py-5 text-base  text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white  lg:inline-flex earth-medium hover-earth-dark">
                   <div class="lg:hidden"><i class="fa-solid fa-house-circle-check lg:hidden"></i></div><span
                     class="ml-3">Services</span>
                 </a>
               </li>
               <li>
-                <a href="#about" @click="navbarOpen = false"
+                <a href="#about" onclick="closeOffcanvas()"
                   class="flex py-5 text-base text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white  lg:inline-flex earth-medium hover-earth-dark">
                   <div class="lg:hidden"><i class="fa-solid fa-people-group"></i></div><span class="ml-3">About
                     us</span>
                 </a>
               </li>
               <li>
-                <a href="#contact" @click="navbarOpen = false"
+                <a href="#contact" @click="navbarOpen = false" onclick="closeOffcanvas()"
                   class="flex py-5 text-base text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white  lg:inline-flex earth-medium hover-earth-dark">
                   <div class="lg:hidden"><i class="fa-solid fa-phone"></i></div>
                   <span class="ml-3">Contact Us</span>
