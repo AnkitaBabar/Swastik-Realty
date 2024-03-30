@@ -20,11 +20,35 @@
     // getInTouchBtn.addEventListener('click', handleGetInTouchBtnClick);
 
     function closeOffcanvas() {
+      var navbarCollapse = document.getElementById('navbarCollapse');
+      navbarCollapse.classList.add('hidden');
+      var navbarTogglerButton = document.getElementById('navbarToggler');
+      navbarTogglerButton.classList.remove('navbarTogglerActive')
+    }
+
+    function toggleOffCanvas() {
+
+      //check if offcanvas is active
+      var navbarCollapse = document.getElementById('navbarCollapse');
+      var navbarTogglerButton = document.getElementById('navbarToggler');
+
+
+      if (navbarTogglerButton.classList.contains('navbarTogglerActive')) {
+        navbarTogglerButton.classList.remove('navbarTogglerActive')
+        navbarCollapse.classList.add('hidden');
+      }
+      else {
+        navbarTogglerButton.classList.add('navbarTogglerActive')
+        navbarCollapse.classList.remove('hidden');
+      }
 
     }
 
     function openOffcanvas() {
-
+      var navbarTogglerButton = document.getElementById('navbarToggler');
+      navbarTogglerButton.classList.add('navbarTogglerActive')
+      var navbarCollapse = document.getElementById('navbarCollapse');
+      navbarCollapse.classList.remove('hidden');
     }
 
     function handleGetInTouchBtnClick(e) {
@@ -34,8 +58,7 @@
       getInTouchForm.classList.remove('hidden');
       var getInTouchResponse = document.getElementById('getInTouchResponse');
       getInTouchResponse.classList.add('hidden')
-      // document.forms['getInTouchForm']['full-name'].value = '';
-      // console.log("$$$", fullname)
+
     }
 
     function handleGetInTouchModalCancel() {
@@ -79,11 +102,7 @@
 <body>
   <!-- ====== Navbar Section Start -->
 
-  <header x-data="
-       {
-         navbarOpen: false
-       }
-     " class="flex z-10 fixed w-full items-center bg-white dark:bg-dark top-0">
+  <header class="flex z-10 fixed w-full items-center bg-white dark:bg-dark top-0">
     <div class="container mx-auto ">
       <div class="relative -mx-4 flex items-center justify-between">
         <div class="w-60 max-w-full px-4">
@@ -94,16 +113,15 @@
         </div>
         <div class="flex w-auto items-center justify-between px-4">
           <div>
-            <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' "
-              onclick="openOffcanvas()" id="navbarToggler"
+            <button onclick="toggleOffCanvas()" id="navbarToggler"
               class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px]   lg:hidden">
               <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
               <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
               <span class="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
             </button>
           </div>
-          <nav :class="!navbarOpen && 'hidden' " id="navbarCollapse"
-            class="absolute right-0 top-full w-full pt-[80px] pb-[140px] lg:py-0 bg-white px-6  shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent">
+          <nav id="navbarCollapse"
+            class="absolute hidden right-0 top-full w-full pt-[80px] pb-[140px] lg:py-0 bg-white px-6  shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent">
             <ul class="block lg:flex">
               <li>
                 <a href="#hero" onclick="closeOffcanvas()"
@@ -127,7 +145,7 @@
                 </a>
               </li>
               <li>
-                <a href="#contact" @click="navbarOpen = false" onclick="closeOffcanvas()"
+                <a href="#contact" onclick="closeOffcanvas()"
                   class="flex py-5 text-base text-2xl lg:text-normal font-medium  text-body-color pl-6 hover:text-dark dark:text-dark-6 dark:hover:text-white  lg:inline-flex earth-medium hover-earth-dark">
                   <div class="lg:hidden"><i class="fa-solid fa-phone"></i></div>
                   <span class="ml-3">Contact Us</span>
@@ -601,7 +619,7 @@
 
                       </div>
                       <div class=" hidden max-w-[300px]" id="getInTouchResponse">
-                        <h1 class="font-bold earth-dark mb-5 text-4xl hidden lg:visible">Thank you for reaching out!
+                        <h1 class="font-bold earth-dark mb-5 text-4xl ">Thank you for reaching out!
                         </h1>
                         <p class=" earth-dark mb-5   ">Your inquiry has been received and is
                           being processed. We aim to respond as promptly as possible. In the meantime, if you have any
